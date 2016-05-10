@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+
+    var rannum  = Math.floor((Math.random() * 100) + 1);
+    var rannum1  = Math.floor((Math.random() * 100) + 1);
+    var rannum2  = Math.floor((Math.random() * 100) + 1);
+    var rannum3  = Math.floor((Math.random() * 100) + 1);
+    var rannum4  = Math.floor((Math.random() * 100) + 1);
+    var rannum5  = Math.floor((Math.random() * 100) + 1);
+    var rannum6  = Math.floor((Math.random() * 100) + 1);
+    var rannum7  = Math.floor((Math.random() * 100) + 1);
+    var rannum8  = Math.floor((Math.random() * 100) + 1);
+    var rannum9  = Math.floor((Math.random() * 100) + 1);
+    var rannum10  = Math.floor((Math.random() * 100) + 1);
+    var rannum11  = Math.floor((Math.random() * 100) + 1);
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      theme: "theme3",
+      title:{
+        text: "Earthquakes - per month"
+      },
+      animationEnabled: true,
+      axisX: {
+        valueFormatString: "MMM",
+        interval:1,
+        intervalType: "month"
+
+      },
+      axisY:{
+        includeZero: false
+
+      },
+      data: [
+      {
+        type: "line",
+        //lineThickness: 3,
+        dataPoints: [
+        { x: new Date(2012, 00, 1), y: rannum },
+        { x: new Date(2012, 01, 1), y: rannum1},
+        { x: new Date(2012, 02, 1), y: rannum2, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+        { x: new Date(2012, 03, 1), y: rannum3 },
+        { x: new Date(2012, 04, 1), y: rannum4 },
+        { x: new Date(2012, 05, 1), y: rannum5 },
+        { x: new Date(2012, 06, 1), y: rannum6 },
+        { x: new Date(2012, 07, 1), y: rannum7 },
+        { x: new Date(2012, 08, 1), y: rannum8, indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+        { x: new Date(2012, 09, 1), y: rannum9 },
+        { x: new Date(2012, 10, 1), y: rannum10 },
+        { x: new Date(2012, 11, 1), y: rannum11 }
+
+        ]
+      }
+
+
+      ]
+    });
+
+chart.render();
+}
+</script>
+<script type="text/javascript" src="/assets/js/jquery.canvasjs.min.js"></script></head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+
+</html>
