@@ -19,7 +19,7 @@
   <script type="text/javascript">
   window.onload = function () {
 
-    var rannum  = Math.floor((Math.random() * 100) + 1);
+    var rannum  =  Math.floor((Math.random() * 100)/ 100);
     var rannum1  = Math.floor((Math.random() * 100) + 1);
     var rannum2  = Math.floor((Math.random() * 100) + 1);
     var rannum3  = Math.floor((Math.random() * 100) + 1);
@@ -34,9 +34,6 @@
     var chart = new CanvasJS.Chart("chartContainer",
     {
       theme: "theme3",
-      title:{
-        text: "Earthquakes - per month"
-      },
       animationEnabled: true,
       axisX: {
         valueFormatString: "MMM",
@@ -68,15 +65,13 @@
 
         ]
       }
-
-
       ]
     });
 
 chart.render();
 }
 </script>
-<script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="/assets/js/canvasjs.min.js"></script>
 						<div class="inner">
 
 							<!-- Logo -->
@@ -109,10 +104,10 @@ chart.render();
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Name of farm here</h1>
-									<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+								<h1>Farm Auschwitz</h1>
+									<span class="image main"><img src="images/farm1.jpg" alt="" /></span>
 							</header>
-							 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+							 <div id="chartContainer" style="height: 400px; width: 100%;"></div>
 							<h2>Data is as of the last 15 minutes</h2>
 							<h3>Air quality</h3>
 							<div class="table-wrapper">
@@ -147,7 +142,7 @@ chart.render();
 										<tbody>
 											<tr>
 												<td>Benzene</td>
-<td>0.0<script>var rannum  = Math.floor((Math.random() * 100) + 1);document.write(rannum);</script>%</td>											</tr>
+<td>0.0<script>document.write(rannum);</script>%</td>											</tr>
 											<tr>
 												<td>Poly-aromatic<br>Hydrocarbons</td>
 <td>0.0<script>var rannum  = Math.floor((Math.random() * 100) + 1);document.write(rannum);</script>%</td>											</tr>
