@@ -17,9 +17,56 @@
 
         <!-- Header -->
         <header id="header">
+          <script type="text/javascript">
+        window.onload = function () {
 
+
+        chart.render();
+      }
+</script>
 <script type="text/javascript">
 window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainerWater",
+  {
+    theme: "theme1",
+    animationEnabled: true,
+    toolTip: {
+      shared: true
+    },
+    axisY: {
+      title: "Parts per million (PPM)"
+    },
+    data: [
+    {
+      type: "column",
+            name: "Parts per million (PPM)",
+            //showInLegend: true,
+      dataPoints:[
+      {label: "Calcium", y: ((Math.random() * 300) + 1)},
+      {label: "Fluoride", y: ((Math.random() * 300) + 1)},
+      {label: "Fluoroborate", y: ((Math.random() * 300) + 1)},
+      {label: "Nitrate", y: ((Math.random() * 300) + 1)},
+      {label: "Bromide", y: ((Math.random() * 300) + 1)},
+      {label: "Chloride", y: Math.floor((Math.random() * 300) + 1)},
+      {label: "Cupric", y: ((Math.random() * 300) + 1)},
+      {label: "Iodide", y: ((Math.random() * 300) + 1)},
+      {label: "Silver", y: ((Math.random() * 50) + 1)},
+      ]
+    },
+    ],
+        legend:{
+          cursor:"pointer",
+          itemclick: function(e){
+            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+              e.dataSeries.visible = false;
+            }
+            else {
+              e.dataSeries.visible = true;
+            }
+            chart.render();
+          }
+        },
+      });
 var chart = new CanvasJS.Chart("chartContainerAir",
 {
 	theme: "theme1",
@@ -74,7 +121,6 @@ chart.render();
 </script>
             <script type="text/javascript" src="jquery.canvasjs.min.js"></script>
             <div class="inner">
-
                 <!-- Logo -->
                 <a href="index.html" class="logo">
                     <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Dr. Wang's  monitoring app</span>
@@ -105,12 +151,13 @@ chart.render();
         <div id="main">
             <div class="inner">
                 <header>
-                    <h1>Farm Auschwitz</h1>
-                    <span class="image main"><img src="images/farm1.jpg" alt="" /></span>
+                    <h1>Farm Happy cows</h1>
+                    <span class="image main"><img src="images/farm2.jpg" alt="image missing" /></span>
                 </header>
                   <h2>Data is as of the last 15 minutes</h2>
                   <h3>Air quality</h3>
                 <div id="chartContainerAir" style="height: 300px; width: 100%;"></div>
+
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -120,143 +167,137 @@ chart.render();
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Calcium (Ca2+) </td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Carbon Monoxide (CO)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Fluoride (F-)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Carbon Dioxide (CO2)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Fluoroborate (BF4-)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Molecular Oxygen (O2)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Nitrate (NO3-)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Ozone (O3)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Bromide (Br-)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Nitric Oxide (NO)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Chloride (Cl-)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Nitric Dioxide (NO2)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Cupric (Cu2+)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Sulfur Dioxide (SO2)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Iodide (I-)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Ammonia (NH3)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Silver (Ag+)</td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Methane (CH4)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
                             </tr>
-                            <tr>
-                                <td>Temperature</td>
-                                <td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Molecular Hydrogen (H2)</td>
+                                <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 50) + 1);
                                         document.write(rannum);
-                                    </script>°C</td>
+                                    </script>%</td>
                             </tr>
-                            <tr>
-                                <td>pH</td>
-                                <td>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Hydrogen Sulfide (H2S)</td>
+                                <td>0.0
                                     <script>
-                                        var rannum = Math.floor((Math.random() * 12) + 1);
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
-                                    </script></td>
+                                    </script>%</td>
+                            </tr>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Hydrogen Chloride (HCl)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Hydrogen Cyanide (HCN)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Phosphine (PH3)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Chlorine (Cl)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr onclick="location.href='overtime.html'" style="cursor:pointer">
+                                <td>Particulate Matter (PM)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
                             </tr>
                         </tbody>
                     </table>
-                    <script type="text/javascript">
-                  //window.onload = function () {
-                  var chart = new CanvasJS.Chart("chartContainerWater",
-                  {
-                    theme: "theme1",
-                    animationEnabled: true,
-                    toolTip: {
-                      shared: true
-                    },
-                    axisY: {
-                      title: "Parts per million (PPM)"
-                    },
-                    data: [
-                    {
-                      type: "column",
-                            name: "Parts per million (PPM)",
-                            //showInLegend: true,
-                      dataPoints:[
-                      {label: "Calcium", y: ((Math.random() * 300) + 1)},
-                      {label: "Fluoride", y: ((Math.random() * 300) + 1)},
-                      {label: "Fluoroborate", y: ((Math.random() * 300) + 1)},
-                      {label: "Nitrate", y: ((Math.random() * 300) + 1)},
-                      {label: "Bromide", y: ((Math.random() * 300) + 1)},
-                      {label: "Chloride", y: Math.floor((Math.random() * 300) + 1)},
-                      {label: "Cupric", y: ((Math.random() * 300) + 1)},
-                      {label: "Iodide", y: ((Math.random() * 300) + 1)},
-                      {label: "Silver", y: ((Math.random() * 50) + 1)},
-                      ]
-                    },
-                    ],
-                        legend:{
-                          cursor:"pointer",
-                          itemclick: function(e){
-                            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-                              e.dataSeries.visible = false;
-                            }
-                            else {
-                              e.dataSeries.visible = true;
-                            }
-                            chart.render();
-                          }
-                        },
-                      });
 
-                  chart.render();
-
-                  </script>
                     <h3>Water quality</h3>
                     <div id="chartContainerWater" style="height: 300px; width: 100%;"></div>
                     <div class="table-wrapper">
@@ -268,7 +309,7 @@ chart.render();
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Calcium (Ca2+) </td>
                                     <td>0.0
                                         <script>
@@ -276,7 +317,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Fluoride (F-)</td>
                                     <td>0.0
                                         <script>
@@ -284,7 +325,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Fluoroborate (BF4-)</td>
                                     <td>0.0
                                         <script>
@@ -292,7 +333,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Nitrate (NO3-)</td>
                                     <td>0.0
                                         <script>
@@ -300,7 +341,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Bromide (Br-)</td>
                                     <td>0.0
                                         <script>
@@ -308,7 +349,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Chloride (Cl-)</td>
                                     <td>0.0
                                         <script>
@@ -316,7 +357,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Cupric (Cu2+)</td>
                                     <td>0.0
                                         <script>
@@ -324,7 +365,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Iodide (I-)</td>
                                     <td>0.0
                                         <script>
@@ -332,7 +373,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Silver (Ag+)</td>
                                     <td>0.0
                                         <script>
@@ -340,7 +381,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>%</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>Temperature</td>
                                     <td>
                                         <script>
@@ -348,7 +389,7 @@ chart.render();
                                             document.write(rannum);
                                         </script>°C</td>
                                 </tr>
-                                <tr>
+                                <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                     <td>pH</td>
                                     <td>
                                         <script>
@@ -368,7 +409,7 @@ chart.render();
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr onclick="location.href='overtime.html'" style="cursor:pointer">
                                         <td>Seismic</td>
                                         <td>
                                             <script>
@@ -380,7 +421,7 @@ chart.render();
                                 <tfoot>
                                 </tfoot>
                             </table>
-                            <a href="#" class="button special">Refresh</a></li>
+                            <a href="farm2.html" class="button special">Refresh</a></li>
                         </div>
                     </div>
                 </div>
