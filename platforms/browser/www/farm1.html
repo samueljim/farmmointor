@@ -18,9 +18,9 @@
         <!-- Header -->
         <header id="header">
 
-					<script type="text/javascript">
+<script type="text/javascript">
 window.onload = function () {
-var chart = new CanvasJS.Chart("chartContainer",
+var chart = new CanvasJS.Chart("chartContainerAir",
 {
 	theme: "theme1",
 										animationEnabled: true,
@@ -36,21 +36,24 @@ var chart = new CanvasJS.Chart("chartContainer",
 					name: "Parts per million (PPM)",
 					//showInLegend: true,
 		dataPoints:[
-		{label: "Ethylbenzene", y: ((Math.random() * 300) + 1)},
-		{label: "Toluene", y: ((Math.random() * 300) + 1)},
-		{label: "Xylene", y: ((Math.random() * 300) + 1)},
-		{label: "Hydrocarbons", y: ((Math.random() * 300) + 1)},
-		{label: "Methane", y: ((Math.random() * 300) + 1)},
-		{label: "Heavy Metals", y: Math.floor((Math.random() * 300) + 1)},
-		{label: "UAE", y: ((Math.random() * 300) + 1)},
-		{label: "Radioactive", y: ((Math.random() * 300) + 1)},
-		{label: "Seismic", y: ((Math.random() * 50) + 1)},
-
-
+		{label: "Carbon Monoxide", y: ((Math.random() * 300) + 1)},
+		{label: "Carbon Dioxide", y: ((Math.random() * 300) + 1)},
+		{label: "Molecular Oxygen", y: ((Math.random() * 300) + 1)},
+		{label: "Ozone", y: ((Math.random() * 300) + 1)},
+		{label: "Nitric Oxide", y: ((Math.random() * 300) + 1)},
+		{label: "Nitric Dioxide", y: Math.floor((Math.random() * 300) + 1)},
+		{label: "Sulfur Dioxide", y: ((Math.random() * 300) + 1)},
+		{label: "Ammonia", y: ((Math.random() * 300) + 1)},
+		{label: "Methane", y: ((Math.random() * 50) + 1)},
+    {label: "Molecular Hydrogen", y: ((Math.random() * 50) + 1)},
+    {label: "Hydrogen Sulfide", y: ((Math.random() * 50) + 1)},
+    {label: "Hydrogen Chloride", y: ((Math.random() * 50) + 1)},
+    {label: "Hydrogen Cyanide", y: ((Math.random() * 50) + 1)},
+    {label: "Phosphine", y: ((Math.random() * 50) + 1)},
+    {label: "Chlorine", y: ((Math.random() * 50) + 1)},
+    {label: "Particulate Matter", y: ((Math.random() * 50) + 1)},
 		]
 	},
-
-
 	],
 			legend:{
 				cursor:"pointer",
@@ -69,7 +72,7 @@ var chart = new CanvasJS.Chart("chartContainer",
 chart.render();
 }
 </script>
-            <script type="text/javascript" src="/assets/js/jquery.canvasjs.min.js"></script>
+            <script type="text/javascript" src="jquery.canvasjs.min.js"></script>
             <div class="inner">
 
                 <!-- Logo -->
@@ -105,9 +108,9 @@ chart.render();
                     <h1>Farm Auschwitz</h1>
                     <span class="image main"><img src="images/farm1.jpg" alt="" /></span>
                 </header>
-                <div id="chartContainer" style="height: 400px; width: 100%;"></div>
-                <h2>Data is as of the last 15 minutes</h2>
-                <h3>Air quality</h3>
+                  <h2>Data is as of the last 15 minutes</h2>
+                  <h3>Air quality</h3>
+                <div id="chartContainerAir" style="height: 300px; width: 100%;"></div>
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -118,7 +121,7 @@ chart.render();
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Ethylbenzene </td>
+                                <td>Calcium (Ca2+) </td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
@@ -126,7 +129,7 @@ chart.render();
                                     </script>%</td>
                             </tr>
                             <tr>
-                                <td>Toluene</td>
+                                <td>Fluoride (F-)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
@@ -134,16 +137,128 @@ chart.render();
                                     </script>%</td>
                             </tr>
                             <tr>
-                                <td>Xylene</td>
+                                <td>Fluoroborate (BF4-)</td>
                                 <td>0.0
                                     <script>
                                         var rannum = Math.floor((Math.random() * 100) + 1);
                                         document.write(rannum);
                                     </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Nitrate (NO3-)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Bromide (Br-)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Chloride (Cl-)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Cupric (Cu2+)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Iodide (I-)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Silver (Ag+)</td>
+                                <td>0.0
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 100) + 1);
+                                        document.write(rannum);
+                                    </script>%</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 50) + 1);
+                                        document.write(rannum);
+                                    </script>°C</td>
+                            </tr>
+                            <tr>
+                                <td>pH</td>
+                                <td>
+                                    <script>
+                                        var rannum = Math.floor((Math.random() * 12) + 1);
+                                        document.write(rannum);
+                                    </script></td>
                             </tr>
                         </tbody>
                     </table>
+                    <script type="text/javascript">
+                  window.onload = function () {
+                  var chart = new CanvasJS.Chart("chartContainerWater",
+                  {
+                    theme: "theme1",
+                    animationEnabled: true,
+                    toolTip: {
+                      shared: true
+                    },
+                    axisY: {
+                      title: "Parts per million (PPM)"
+                    },
+                    data: [
+                    {
+                      type: "column",
+                            name: "Parts per million (PPM)",
+                            //showInLegend: true,
+                      dataPoints:[
+                      {label: "Calcium", y: ((Math.random() * 300) + 1)},
+                      {label: "Fluoride", y: ((Math.random() * 300) + 1)},
+                      {label: "Fluoroborate", y: ((Math.random() * 300) + 1)},
+                      {label: "Nitrate", y: ((Math.random() * 300) + 1)},
+                      {label: "Bromide", y: ((Math.random() * 300) + 1)},
+                      {label: "Chloride", y: Math.floor((Math.random() * 300) + 1)},
+                      {label: "Cupric", y: ((Math.random() * 300) + 1)},
+                      {label: "Iodide", y: ((Math.random() * 300) + 1)},
+                      {label: "Silver", y: ((Math.random() * 50) + 1)},
+                      ]
+                    },
+                    ],
+                        legend:{
+                          cursor:"pointer",
+                          itemclick: function(e){
+                            if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                              e.dataSeries.visible = false;
+                            }
+                            else {
+                              e.dataSeries.visible = true;
+                            }
+                            chart.render();
+                          }
+                        },
+                      });
+
+                  chart.render();
+                  }
+                  </script>
                     <h3>Water quality</h3>
+                    <div id="chartContainerWater" style="height: 300px; width: 100%;"></div>
                     <div class="table-wrapper">
                         <table>
                             <thead>
@@ -154,15 +269,7 @@ chart.render();
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Benzene</td>
-                                    <td>0.0
-                                        <script>
-                                            document.write(rannum);
-                                        </script>%</td>
-                                </tr>
-                                <tr>
-                                    <td>Poly-aromatic
-                                        <br>Hydrocarbons</td>
+                                    <td>Calcium (Ca2+) </td>
                                     <td>0.0
                                         <script>
                                             var rannum = Math.floor((Math.random() * 100) + 1);
@@ -170,7 +277,7 @@ chart.render();
                                         </script>%</td>
                                 </tr>
                                 <tr>
-                                    <td>Methane</td>
+                                    <td>Fluoride (F-)</td>
                                     <td>0.0
                                         <script>
                                             var rannum = Math.floor((Math.random() * 100) + 1);
@@ -178,7 +285,7 @@ chart.render();
                                         </script>%</td>
                                 </tr>
                                 <tr>
-                                    <td>Heavy Metals</td>
+                                    <td>Fluoroborate (BF4-)</td>
                                     <td>0.0
                                         <script>
                                             var rannum = Math.floor((Math.random() * 100) + 1);
@@ -186,16 +293,70 @@ chart.render();
                                         </script>%</td>
                                 </tr>
                                 <tr>
-                                    <td>Radioactive
-                                        <br>Materials</td>
+                                    <td>Nitrate (NO3-)</td>
                                     <td>0.0
                                         <script>
                                             var rannum = Math.floor((Math.random() * 100) + 1);
                                             document.write(rannum);
                                         </script>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Bromide (Br-)</td>
+                                    <td>0.0
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 100) + 1);
+                                            document.write(rannum);
+                                        </script>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Chloride (Cl-)</td>
+                                    <td>0.0
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 100) + 1);
+                                            document.write(rannum);
+                                        </script>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Cupric (Cu2+)</td>
+                                    <td>0.0
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 100) + 1);
+                                            document.write(rannum);
+                                        </script>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Iodide (I-)</td>
+                                    <td>0.0
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 100) + 1);
+                                            document.write(rannum);
+                                        </script>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Silver (Ag+)</td>
+                                    <td>0.0
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 100) + 1);
+                                            document.write(rannum);
+                                        </script>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Temperature</td>
+                                    <td>
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 50) + 1);
+                                            document.write(rannum);
+                                        </script>°C</td>
+                                </tr>
+                                <tr>
+                                    <td>pH</td>
+                                    <td>
+                                        <script>
+                                            var rannum = Math.floor((Math.random() * 12) + 1);
+                                            document.write(rannum);
+                                        </script></td>
                                 </tr>
                             </tbody>
-
                         </table>
                         <h3>Seismic activtiy</h3>
                         <div class="table-wrapper">
